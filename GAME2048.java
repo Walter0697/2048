@@ -24,6 +24,7 @@ public class GAME2048 extends KeyAdapter
       panel.setLayout(new GridLayout(size, size));
       frame.add(panel);
       
+	  //creating the game board
       create();
       RandomAppear();
       update();
@@ -39,6 +40,7 @@ public class GAME2048 extends KeyAdapter
       frame.setVisible(true);
    }
    
+   //function that randomly generate a number into the game board
    public void RandomAppear()
    {
       Random rnd = new Random();
@@ -54,7 +56,7 @@ public class GAME2048 extends KeyAdapter
       printBoard();
    }
    
-      //coding for testing
+   //print the game board to the screen
    public void printBoard()
    {
       for (int i = 0; i < board.length; i++)
@@ -67,6 +69,7 @@ public class GAME2048 extends KeyAdapter
       }   
    }
    
+   //event call back
    public void keyPressed(KeyEvent e)
    {
       int keyCode = e.getKeyCode();
@@ -94,6 +97,7 @@ public class GAME2048 extends KeyAdapter
       }
    } 
    
+   //event call back for up key
    public void UpKeyPressed()
    {
       for (int i = 0; i < board.length; i++)
@@ -127,6 +131,7 @@ public class GAME2048 extends KeyAdapter
       }
    }
    
+   //event call back for down key
    public void DownKeyPressed()
    {
       for (int i = 0; i < board.length; i++)
@@ -159,6 +164,7 @@ public class GAME2048 extends KeyAdapter
       }
    }
    
+   //event call back for left key
    public void LeftKeyPressed()
    {
       for (int i = 0; i < board.length; i++)
@@ -191,6 +197,7 @@ public class GAME2048 extends KeyAdapter
       }
    }
    
+   //event call back for right key
    public void RightKeyPressed()
    {
       for (int i = 0; i < board.length; i++)
@@ -283,6 +290,7 @@ public class GAME2048 extends KeyAdapter
       }
    }  
    
+   //update the game board
    public void update()
    {
       for (int i = 0; i < textboard.length; i++)
